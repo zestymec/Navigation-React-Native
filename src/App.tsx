@@ -1,6 +1,5 @@
 
 import React from 'react';
-import type { PropsWithChildren } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -28,24 +27,23 @@ const Stack = createNativeStackNavigator<RootStackParamList>()
 
     return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName='Home'>
-          <Stack.Screen
-          name='Home'
-          component={Home}
-          options={{
-            title: "Umer ibne Aziz",
-          }}
-          />
-          <Stack.Screen
-          name='Details'
-          component={Details}
-          options={{
-            title: "Product Details"
-          }}
-          />
-          
-        </Stack.Navigator>
-      </NavigationContainer>
+      <Stack.Navigator initialRouteName='Home'>
+        <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{
+          title: "Trending Products"
+        }}
+        />
+        <Stack.Screen
+        name="Details"
+        component={Details}
+        options={{
+          title: "Product details"
+        }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
     );
   }
 
